@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>keyboard</title>
+</head>
+<body>
+<div>
+    <header style="font-weight: bold">hw3</header>
+</div>
+<br>
+<div>
+    Waveform
+    <select id="waveform">z
+        <option value="sine">Sine</option>
+        <option value="sawtooth">Sawtooth</option>
+        <option value="square">square</option>
+        <option value="triangle">triangle</option>
+    </select>
+</div>
+<br>
+<div>
+    Chords
+    <select id="chords">
+        <option value=0 id="chords-no">no</option>
+        <option value=1>yes</option>
+    </select>
+</div>
+<br><br>
+<div>
+    Synthesis
+    <select id="synthesis">
+        <option value="none">None</option>
+        <option value="additive">Additive</option>
+        <option value="AM">AM</option>
+        <option value="FM">FM</option>
+        <option value="combo">combo</option>
+    </select>
+</div>
+<br>
+<div>
+    LFO
+    <select id="lfo">
+        <option value=0 id="lfo-no">no</option>
+        <option value=1>yes</option>
+    </select>
+</div>
+<br><br>
+<div>
+    <p>Control modulator frequency</p>
+    <input type="range" min=1 max=1000 oninput="updateFreq(this.value)">
+    <p>Control index of modulation</p>
+    <input type="range" min=1 max=1000 oninput="updateIndex(this.value)">
+</div>
+
+
+</body>
+<script src="hw2.js"></script>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sounds</title>
+</head>
+<body>
+<br>
+<header style="font-weight: bold; font-size: large">some sounds</header>
+<br>
+<div>
+    <button id="babble">babble</button>
+</div>
+<br><br>
+<div>
+    <button id="meet">m<b>ee</b>t</button>
+    <button id="ship">sh<b>i</b>p</button>
+    <button id="pet">p<b>e</b>t</button>
+    <button id="cat">c<b>a</b>t</button>
+    <button id="love">l<b>o</b>ve</button>
+    <button id="root">r<b>oo</b>t</button>
+    <button id="hook">h<b>oo</b>k</button>
+    <button id="about"><b>a</b>bout</button>
+    <button id="father">f<b>a</b>ther</button>
+    <br>
+    Freq:
+    <input id = 'freq' type="range" min="30" max="500" oninput="updateFreq(this.value)">
+    <br><br>
+    <button id="stop">stop vowels</button>
+</div>
+<div>
+    <br><br><br>
+    <header style="font-weight: bold; font-size: large">some thoughts</header>
+    <br>
+    <div style="line-height: 1.8; width: 800px">
+        I aimed to recreate human vowel sounds, taking inspiration from Farnell's Chapter on mammal sounds. The main
+        characteristic of human sounds are the 3 formants, which is why I created 3 bandpass filters. I then created
+        another biquad filter to connect to each formant, and a gain node to connect to each filter's gain node. This
+        is to make connections from the oscillator, to the filters, and to the destination easier.<br>
+        <br>
+        Farnell's chapter also included a table of frequencies for each formant according to a specific vowel sound, as
+        shown on this page. I took these frequency values, added them to a dictionary, and created a list of the words.
+        My design choices could be improved, since I relied on the specific ordering of words to associate with each button
+        that corresponds each sound. However, it seems okay in the context of this assignment because the focus is more on
+        the sound design.
+        <br>
+        <br>
+    </div>
+
+    <img src="diagram.png" width="800" height="auto">
+</div>
+
+</body>
+<script src="hw3.js"></script>
+</html>
